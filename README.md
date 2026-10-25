@@ -52,10 +52,10 @@ Polar night, midnight sun, and the quiet in between. In development — coming s
 
 We design and build websites, web and mobile apps, and look after hosting and upkeep afterwards.
 
-| Client | Site | What we did |
+| | Client | What we did |
 |---|---|---|
-| **TEALOG** | [tealog.com.au](https://tealog.com.au) | Website design & development |
-| **JOYFUL** | [joyful-outdoors.com](https://joyful-outdoors.com) | Website design & development |
+| <a href="https://tealog.com.au"><img src="docs/cases/tealog.jpg" width="320" alt="TEALOG homepage" /></a> | **TEALOG**<br/>[tealog.com.au](https://tealog.com.au) | A Melbourne shop for Chinese teas sourced direct from Fujian — brand site, catalogue, checkout and a brewing guide. |
+| <a href="https://joyful-outdoors.com"><img src="docs/cases/joyful.jpg" width="320" alt="JOYFUL GROUP homepage" /></a> | **JOYFUL GROUP**<br/>[joyful-outdoors.com](https://joyful-outdoors.com) | Company site for an outdoor-wear OEM / ODM manufacturer with factories in China, Myanmar and Bangladesh. |
 
 Get in touch: [marsli2000@outlook.com](mailto:marsli2000@outlook.com)
 
@@ -65,7 +65,7 @@ Get in touch: [marsli2000@outlook.com](mailto:marsli2000@outlook.com)
 index.html      markup, English copy as the default
 styles.css      design tokens, layout, animations
 main.js         EN / 中文 switch, scroll reveals
-assets/         favicon, Orbit icon and screenshots
+assets/         favicon, Orbit icon and screenshots, client-site screenshots
 docs/           images for this README
 CNAME           custom domain for GitHub Pages
 ```
