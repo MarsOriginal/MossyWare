@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>MossyWare — Small software, grown slowly</title>
+  <meta name="description" content="MossyWare is an independent software studio. Makers of Orbit and Svalbard Rhapsody, and builders of websites and apps for small businesses." />
+  <meta name="theme-color" content="#f2eee4" />
+  <meta property="og:title" content="MossyWare" />
+  <meta property="og:description" content="Small software, grown slowly." />
+  <meta property="og:url" content="https://mossyware.com/" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#work" data-i18n="skip">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#" aria-label="MossyWare">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><use href="#mark" /></svg>
+      <span>MossyWare</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#studio" data-i18n="nav.studio">Build with us</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <button class="lang" type="button" aria-label="Switch language / 切换语言">
+      <span data-lang="en">EN</span><span class="lang-sep">/</span><span data-lang="zh">中</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <p class="eyebrow reveal" data-i18n="hero.eyebrow">An independent software studio</p>
+      <h1 class="hero-title reveal">
+        <span data-i18n="hero.l1">Small software,</span><br />
+        <em data-i18n="hero.l2">grown slowly.</em>
+      </h1>
+      <div class="hero-foot reveal">
+        <p class="hero-lede" data-i18n="hero.lede">We make calm, carefully crafted apps of our own — and build websites and software for people who care about the details.</p>
+        <a class="scroll-cue" href="#work" aria-label="Scroll to work">
+          <span data-i18n="hero.cue">See the work</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m0 0-6-6m6 6 6-6" /></svg>
+        </a>
+      </div>
+      <svg class="hero-moss" viewBox="0 0 600 600" aria-hidden="true">
+        <defs>
+          <radialGradient id="mg" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="var(--lichen)" stop-opacity=".55" />
+            <stop offset="1" stop-color="var(--lichen)" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <circle cx="300" cy="300" r="300" fill="url(#mg)" />
+        <g class="spores">
+          <circle cx="210" cy="250" r="5" /><circle cx="380" cy="190" r="3" /><circle cx="330" cy="400" r="4" />
+          <circle cx="160" cy="380" r="2.5" /><circle cx="440" cy="330" r="2" /><circle cx="270" cy="150" r="2" />
+        </g>
+      </svg>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section">
+      <header class="section-head reveal">
+        <span class="section-no">01</span>
+        <h2 data-i18n="work.title">Our projects</h2>
+        <p data-i18n="work.sub">Things we make for ourselves, and for you.</p>
+      </header>
+
+      <!-- Orbit -->
+      <article class="project orbit reveal">
+        <div class="project-copy">
+          <div class="project-id">
+            <img src="assets/orbit/icon.png" width="56" height="56" alt="" />
+            <div>
+              <h3>Orbit</h3>
+              <p class="tag" data-i18n="orbit.kind">Day planner · iOS & Android</p>
+            </div>
+          </div>
+          <p class="project-tagline" data-i18n="orbit.tagline">Plan less. Focus more.</p>
+          <p data-i18n="orbit.desc">A calm day planner built around three quiet rooms: a timeline for your time blocks, a focus timer with lo‑fi and singing bowls synthesised right on the device, and a daily almanac leaf to start the morning.</p>
+          <ul class="features">
+            <li><b data-i18n="orbit.f1t">Day</b><span data-i18n="orbit.f1">Drag blocks onto a gentle timeline.</span></li>
+            <li><b data-i18n="orbit.f2t">Focus</b><span data-i18n="orbit.f2">An orbit-ring countdown with generative sound.</span></li>
+            <li><b data-i18n="orbit.f3t">Almanac</b><span data-i18n="orbit.f3">Moon, tarot, or the Chinese almanac — every day.</span></li>
+            <li><b data-i18n="orbit.f4t">Private</b><span data-i18n="orbit.f4">No server, no analytics. Your plans stay on your phone.</span></li>
+          </ul>
+          <p class="meta"><span>v0.9.5</span><span>iOS · Android</span><span>English · 简体 · 繁體</span></p>
+        </div>
+        <div class="orbit-stage" aria-hidden="true">
+          <svg class="rings" viewBox="0 0 500 500">
+            <circle cx="250" cy="250" r="240" /><circle cx="250" cy="250" r="180" /><circle cx="250" cy="250" r="120" />
+            <g class="planet p1"><circle cx="250" cy="10" r="7" /></g>
+            <g class="planet p2"><circle cx="250" cy="70" r="5" /></g>
+          </svg>
+          <figure class="phone ph-l"><img src="assets/orbit/04-almanac.webp" alt="" loading="lazy" width="540" height="1200" /></figure>
+          <figure class="phone ph-c"><img src="assets/orbit/02-day.webp" alt="Orbit day view" loading="lazy" width="540" height="1200" /></figure>
+          <figure class="phone ph-r"><img src="assets/orbit/03-focus.webp" alt="" loading="lazy" width="540" height="1200" /></figure>
+        </div>
+      </article>
+
+      <!-- Svalbard Rhapsody -->
+      <article class="project svalbard reveal">
+        <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="stars" aria-hidden="true"></div>
+        <svg class="ridge" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 200V128l90-46 70 30 110-78 80 52 60-22 120 70 90-40 110 56 80-34 120 50 90-44 90 38 90-18v58Z" />
+          <path class="ridge-front" d="M0 200v-38l120-24 100 30 140-46 120 40 130-26 110 32 140-36 110 26 130-18 100 22v38Z" />
+        </svg>
+        <div class="svalbard-copy">
+          <p class="coords">78°13′ N · 15°38′ E</p>
+          <h3>Svalbard <em>Rhapsody</em></h3>
+          <p class="svalbard-cn" lang="zh-Hans">斯瓦尔巴狂想曲</p>
+          <p class="project-tagline" data-i18n="sv.tagline">A rhapsody from the top of the world.</p>
+          <p data-i18n="sv.desc">Polar night, midnight sun, and the quiet in between. Our next project takes its name from the Arctic archipelago where the light keeps its own schedule.</p>
+          <p class="status"><span class="pulse"></span><span data-i18n="sv.status">In development — coming soon</span></p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Studio / services -->
+    <section id="studio" class="section studio">
+      <header class="section-head reveal">
+        <span class="section-no">02</span>
+        <h2 data-i18n="studio.title">Websites & software, built for you</h2>
+        <p data-i18n="studio.sub">The same care we put into our own apps, applied to your business — from first sketch to launch and beyond.</p>
+      </header>
+
+      <ol class="services reveal">
+        <li>
+          <span class="svc-no">a</span>
+          <h3 data-i18n="svc.1t">Websites</h3>
+          <p data-i18n="svc.1">Brand sites, shops and landing pages that are fast, bilingual if you need it, and easy to keep up to date.</p>
+        </li>
+        <li>
+          <span class="svc-no">b</span>
+          <h3 data-i18n="svc.2t">Web & mobile apps</h3>
+          <p data-i18n="svc.2">Booking, ordering, internal tools — on the web, iPhone and Android from a single codebase.</p>
+        </li>
+        <li>
+          <span class="svc-no">c</span>
+          <h3 data-i18n="svc.3t">Design</h3>
+          <p data-i18n="svc.3">Identity, interface and content design that feels like you, not like a template.</p>
+        </li>
+        <li>
+          <span class="svc-no">d</span>
+          <h3 data-i18n="svc.4t">Care & hosting</h3>
+          <p data-i18n="svc.4">Domains, hosting, updates and small changes, handled — so you can get on with your work.</p>
+        </li>
+      </ol>
+
+      <div class="cases">
+        <h3 class="cases-title reveal" data-i18n="cases.title">Selected client work</h3>
+        <div class="case-grid">
+          <a class="case case-tea reveal" href="https://tealog.com.au" target="_blank" rel="noopener">
+            <div class="case-art" aria-hidden="true">
+              <svg viewBox="0 0 200 120"><path d="M40 60c0-22 26-40 60-40s60 18 60 40-26 40-60 40-60-18-60-40Z" /><path d="M100 22c-10 18-10 58 0 76" /><path d="M100 46 76 34M100 62l26-14M100 78 78 68" /></svg>
+            </div>
+            <div class="case-body">
+              <p class="case-domain">tealog.com.au</p>
+              <h4>TEALOG</h4>
+              <p data-i18n="cases.tea">Website design & development</p>
+            </div>
+            <span class="case-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="case case-joy reveal" href="https://joyful-outdoors.com" target="_blank" rel="noopener">
+            <div class="case-art" aria-hidden="true">
+              <svg viewBox="0 0 200 120"><path d="M10 104 70 36l30 34 26-24 64 58Z" /><circle cx="150" cy="30" r="12" /><path d="M58 104l12-30 12 30" /></svg>
+            </div>
+            <div class="case-body">
+              <p class="case-domain">joyful-outdoors.com</p>
+              <h4>JOYFUL</h4>
+              <p data-i18n="cases.joy">Website design & development</p>
+            </div>
+            <span class="case-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <span class="section-no reveal">03</span>
+      <h2 class="contact-title reveal">
+        <span data-i18n="contact.l1">Have something</span><br />
+        <em data-i18n="contact.l2">you'd like to grow?</em>
+      </h2>
+      <p class="reveal" data-i18n="contact.sub">Tell us a little about your project. We usually reply within two working days.</p>
+      <a class="mail reveal" href="mailto:hello@mossyware.com">hello@mossyware.com</a>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© <span id="year">2026</span> MossyWare</span>
+    <span data-i18n="foot">Made slowly, with care.</span>
+  </footer>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mark" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="15" fill="var(--moss)" />
+      <path d="M8 21c2-6 5-9 8-9s6 3 8 9" fill="none" stroke="var(--paper)" stroke-width="2" stroke-linecap="round" />
+      <circle cx="16" cy="9" r="2.2" fill="var(--lichen)" />
+    </symbol>
+  </svg>
+
+  <script src="main.js"></script>
+</body>
+</html>
