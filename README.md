@@ -64,25 +64,37 @@ Get in touch: [marsli2000@outlook.com](mailto:marsli2000@outlook.com)
 ## This site
 
 ```
-index.html      markup, English copy as the default
-styles.css      design tokens, layout, animations
-main.js         EN / 中文 switch, scroll reveals
-assets/         Orbit icon and screenshots, client-site screenshots
-brand/          logo kit (see below), favicon.svg, og-image.png
-docs/           images for this README
+src/page.html     page template ({{key}} = text from strings.mjs, {{@var}} = set by the build)
+src/strings.mjs   all copy, English and Simplified Chinese
+scripts/build.mjs renders the pages below, plus structured data
+index.html        English page, https://mossyware.com/        (generated)
+zh/index.html     Chinese page, https://mossyware.com/zh/     (generated)
+404.html          not-found page                                (generated)
+sitemap.xml       both pages with hreflang alternates           (generated)
+robots.txt        points crawlers at the sitemap
+styles.css        design tokens, layout, animations
+main.js           language preference, scroll reveals
+assets/           Orbit icon and screenshots, client-site screenshots
+brand/            logo kit (see below), favicon.svg, og-image.png
+docs/             images for this README
 favicon.ico, apple-touch-icon.png, site.webmanifest   browser and home-screen icons
-CNAME           custom domain for GitHub Pages
+CNAME             custom domain for GitHub Pages
 ```
 
-Run it by opening `index.html`, or serve the folder:
+**Editing copy:** change `src/strings.mjs` (and `src/page.html` for structure), then rebuild and commit the generated files:
 
 ```bash
-python3 -m http.server 8000   # http://localhost:8000
+node scripts/build.mjs            # needs Node 18+; no dependencies
+python3 -m http.server 8000       # preview at http://localhost:8000 and /zh/
 ```
 
-**Translations** live in the `STRINGS` table in `main.js`. Every translatable element carries a `data-i18n` key; add the key to both `en` and `zh`. The chosen language is remembered per browser and defaults to the visitor's browser language.
+Every key must exist in both languages; the build stops if one is missing.
 
-**Deploying:** enable GitHub Pages on `main` (root folder). The `CNAME` file points it at `mossyware.com`; at the DNS provider add the four GitHub Pages `A` records for the apex domain and a `CNAME` for `www` → `marsoriginal.github.io`.
+**Languages:** English lives at `/` and Chinese at `/zh/`, each a complete static page, so search engines index both. They point at each other with `hreflang` tags. On a first visit, a browser set to Chinese is sent from `/` to `/zh/`. Once a visitor uses the EN / 中 switch, their choice is remembered.
+
+**SEO:** each page has its own title, description, canonical URL and Open Graph tags. They also carry JSON-LD structured data covering the organisation, its services, the page and the FAQ. The sitemap is listed in `robots.txt`.
+
+**Deploying:** enable GitHub Pages on `main` (root folder). The `CNAME` file points it at `mossyware.com`. At the DNS provider, add the four GitHub Pages `A` records for the apex domain and a `CNAME` for `www` pointing to `marsoriginal.github.io`.
 
 **Secrets:** this repository is public. Keys, `.env` files, keystores and credentials are ignored by `.gitignore`; keep them out of commits.
 
