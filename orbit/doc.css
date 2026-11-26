@@ -1,0 +1,137 @@
+/* Orbit support and privacy pages. Shares the site tokens in styles.css. */
+
+.doc-page .top { flex-wrap: wrap; row-gap: 10px; }
+.doc-page .nav { flex-wrap: wrap; gap: 12px 22px; }
+.doc-page .nav a[aria-current="page"] { color: var(--ink); }
+.doc-page .nav a[aria-current="page"]::after { transform: scaleX(1); }
+
+.doc-wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(28px, 5vh, 56px) var(--gutter) 88px;
+}
+
+.doc-kicker {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+
+.doc-lead {
+  max-width: 62ch;
+  color: var(--ink-soft);
+  margin-top: 16px;
+}
+
+.doc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.doc-actions .btn { text-decoration: none; }
+.doc-actions a:not(.btn) {
+  color: var(--moss);
+  text-underline-offset: 3px;
+}
+
+.doc-prose {
+  max-width: 42rem;
+  margin-top: clamp(48px, 8vh, 80px);
+}
+
+.doc-prose h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+  margin: 2.4rem 0 0.7rem;
+  scroll-margin-top: 88px;
+}
+
+.doc-prose h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0;
+  margin: 1.5rem 0 0.35rem;
+  scroll-margin-top: 88px;
+}
+
+.doc-prose p,
+.doc-prose li,
+.doc-prose dd { color: var(--ink-soft); }
+
+.doc-prose p { margin: 0.45rem 0 0.8rem; }
+.doc-prose ul,
+.doc-prose ol { margin: 0.3rem 0 1rem; padding-left: 1.25rem; }
+.doc-prose ul.features { padding-left: 0; list-style: none; }
+.doc-prose li { margin: 0.35rem 0; }
+.doc-prose a { color: var(--moss); text-underline-offset: 3px; }
+.doc-prose strong { color: var(--ink); font-weight: 600; }
+
+.doc-card {
+  background: var(--paper-2);
+  border-radius: 18px;
+  padding: 4px 22px 14px;
+  margin: 1.2rem 0 1.6rem;
+}
+
+.doc-card h2,
+.doc-card h3 { scroll-margin-top: 96px; }
+
+.facts { margin: 0.4rem 0 1.2rem; }
+.facts dt {
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 0.9rem;
+}
+.facts dd { margin: 0.15rem 0 0; }
+
+.lang-block {
+  border-top: 1px solid var(--line);
+  margin-top: 3rem;
+  padding-top: 1.6rem;
+}
+
+.doc-updated {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.doc-page :target,
+#delete-account,
+.doc-prose h2,
+.doc-prose h3 { scroll-margin-top: 80px; }
+
+.doc-page a:focus-visible,
+.doc-page button:focus-visible,
+.doc-page summary:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 3px;
+}
+
+.doc-page .orbit { margin-top: 8px; }
+.doc-page .project h1 {
+  font-size: clamp(36px, 4.6vw, 60px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+@media (max-width: 680px) {
+  .doc-page :target,
+  #delete-account,
+  .doc-prose h2,
+  .doc-prose h3 { scroll-margin-top: 140px; }
+  .doc-page .nav {
+    display: flex;
+    margin-left: 0;
+    width: 100%;
+    gap: 8px 14px;
+    font-size: 14px;
+  }
+  .doc-card { padding: 4px 16px 12px; }
+  .doc-page .orbit-stage { min-height: 420px; }
+}

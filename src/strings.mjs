@@ -86,6 +86,8 @@ export default {
     'contact.sub': 'Tell us what you need, and your timeline and budget if you have them. We reply within two working days.',
     'contact.subject': 'Website enquiry',
     'foot.tag': 'Website & app development · Australia and remote',
+    'foot.orbit': 'Orbit',
+    'foot.privacy': 'Orbit privacy',
     'foot.src': 'Source on GitHub',
 
     '404.title': 'Page not found',
@@ -177,6 +179,8 @@ export default {
     'contact.sub': '说说你需要什么，有时间和预算的话也一起告诉我们。我们会在两个工作日内回复。',
     'contact.subject': '网站开发咨询',
     'foot.tag': '澳洲网站开发 · App 开发 · 外贸独立站',
+    'foot.orbit': 'Orbit',
+    'foot.privacy': 'Orbit 隐私政策',
     'foot.src': 'GitHub 上的本站源码',
 
     '404.title': '页面不存在',

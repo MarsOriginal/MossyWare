@@ -2,7 +2,7 @@
 //   index.html     English, served at https://mossyware.com/
 //   zh/index.html  Simplified Chinese, served at https://mossyware.com/zh/
 //   404.html       bilingual not-found page
-//   sitemap.xml    both pages with hreflang alternates
+//   sitemap.xml    homepage alternates, plus /orbit/ and /orbit/privacy/
 // Usage: node scripts/build.mjs
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -161,6 +161,14 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   <url>
     <loc>${SITE}zh/</loc>
     <lastmod>${today}</lastmod>${alternates}
+  </url>
+  <url>
+    <loc>${SITE}orbit/</loc>
+    <lastmod>${today}</lastmod>
+  </url>
+  <url>
+    <loc>${SITE}orbit/privacy/</loc>
+    <lastmod>${today}</lastmod>
   </url>
 </urlset>
 `;
