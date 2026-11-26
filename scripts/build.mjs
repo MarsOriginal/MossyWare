@@ -95,6 +95,8 @@ for (const code of ['en', 'zh']) {
     otherHref: other === 'zh' ? page.root + 'zh/' : page.root,
     otherLang: PAGES[other].lang,
     otherCode: other,
+    code,
+    mossH: code === 'zh' ? '716' : '756',
     fonts: esc(page.fonts),
     email: EMAIL,
     mailto: esc(`mailto:${EMAIL}?subject=${encodeURIComponent(STRINGS[code]['contact.subject'])}`),

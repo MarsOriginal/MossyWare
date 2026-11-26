@@ -10,7 +10,7 @@
 
 ---
 
-MossyWare is a small software studio. Our day planner Orbit is in beta on iOS and Android, our first game Svalbard Rhapsody is in development, and we build websites and apps for clients.
+MossyWare is a small software studio. Our day planner Orbit is in beta on iOS and Android, our team board Varde is at version 0.1, our first game Svalbard Rhapsody is in development, and we build websites and apps for clients.
 
 This repository holds the source of [mossyware.com](https://mossyware.com): a static, bilingual (English / 简体中文) one-page site with no build step and no dependencies.
 
@@ -45,6 +45,33 @@ A day planner for iPhone and Android with time blocks, a focus timer with lo‑f
 </p>
 
 Built with React 18, Vite and Capacitor 8 for the native shells; Web Audio for all sound; `lunar-javascript` for the almanac. Orbit's own source is kept private.
+
+### Varde: *a team board that shows what nobody has touched*
+
+A self-hosted team kanban board. It runs on one computer in the office, everyone on the network uses it in the browser, and it keeps working when the connection drops.
+
+<p align="center">
+  <img src="docs/varde/hero.jpg" width="820" alt="A Varde board in dark and light mode, with mossy cards and a list over its limit" />
+</p>
+
+*Varde* is Norwegian for a cairn, the pile of stones that marks a path. Each card is a stone, and a card nobody has touched for 7, 14 or 30 days grows a band of moss along its edge. Once a week, **Review** gathers every mossy card so you can keep going, look again in a week, or archive.
+
+<p align="center">
+  <img src="docs/varde/moss.jpg" width="260" alt="Three cards with moss bands, idle for 40, 18 and 9 days" />
+  &nbsp;
+  <img src="docs/varde/quickadd.jpg" width="260" alt="One line of text becomes a card with a due date, a person and a label" />
+</p>
+<p align="center"><img src="docs/varde/review.jpg" width="620" alt="The weekly moss review" /></p>
+
+| | |
+|---|---|
+| **Offline** | Changes are kept on the device and sync when the server is back. When two people change the same thing, everyone ends up with the same result. |
+| **One-line cards** | `fix pump seal by friday @sam #urgent` becomes a card with a due date, person and label. |
+| **Teams** | Accounts, invite codes, and owner / admin / member roles. |
+| **Lists get heavy** | Give a list a card limit; over it, the list shows its weight instead of blocking you. |
+| **Languages** | English and 简体中文, light and dark mode. |
+
+<p align="center"><sub>v0.1 · self-hosted, local network · React, TypeScript, Node's built-in SQLite. Varde's source is kept private.</sub></p>
 
 ### Svalbard Rhapsody · 斯瓦尔巴狂想曲
 
